@@ -13,5 +13,5 @@ chmod +x coding_meetups
 - Name
 - Location
 - Meeting Time
-- Meeting frequency
+- Meeting frequency 
 - More info
