@@ -1,3 +1,5 @@
+require "nokogiri"
+require "open-uri"
 require_relative "./coding_meetups/version"
 
 
