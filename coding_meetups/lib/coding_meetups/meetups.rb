@@ -5,8 +5,9 @@ class CodingMeetups::Meetups
 
   def self.all
     #returns a bunch of instances of coding meetups
-    puts "Phoenix meetup 1"
-    puts "Phoenix meetup 2"
+    #scrape coding website, or facebook, then return meetups
+    CodingMeetups::MeetupsScraper.new("url goes here")
+
     meetup_1 = self.new
     meetup_1.name = "Phoenix meetup 1"
     meetup_1.location = "here's the location for meeetup 1"

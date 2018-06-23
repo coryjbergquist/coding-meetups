@@ -26,7 +26,8 @@ class CodingMeetups::CLI
     input = gets.strip.downcase
 
     if input.to_i > 0
-      puts @meetups[input.to_i-1]
+      the_meetup = @meetups[input.to_i-1]
+      puts "#{the_meetup.name} - #{the_meetup.location} - #{the_meetup.time}."
     elsif input == "list"
       list_meetups
     else
