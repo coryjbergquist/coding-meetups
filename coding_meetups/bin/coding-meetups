@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-require '.lib/coding_meetups'
+  require "./lib/coding_meetups"
 
-puts "hello world"
 
 CodingMeetups::CLI.new.call
