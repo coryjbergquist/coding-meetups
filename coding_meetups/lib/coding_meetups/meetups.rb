@@ -13,7 +13,7 @@ class CodingMeetups::Meetups
   def self.scrape_meetups
     meetups = []
 
-    meetups << self.scrape_facebook
+    meetups << self.scrape_meetup_com
     #go to facebook, find coding groups for Phoenix
     #extract group info
     #instantiate a meetup
@@ -36,12 +36,12 @@ class CodingMeetups::Meetups
 
   end
 
-  def self.scrape_facebook
-    doc = Nokogiri::HTML(open("https://www.facebook.com/groups/free.code.camp.tempe.phoenix.scottsdale/events/"))
+  def self.scrape_meetup_com
+    doc = Nokogiri::HTML(open("https://www.meetup.com/webdesignersdevelopers/events/"))
     binding.pry
   end
-  
-
+#  searching for this link within the current page "https://www.meetup.com/webdesignersdevelopers/events/mlhpxnyxkbvb/"
+#  doc.css("div#outlet #root .flex .flex-item #mupMain .bounds .child-wrapper .chunk .eventList")
 
 
 end

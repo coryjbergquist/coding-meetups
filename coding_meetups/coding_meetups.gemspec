@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Cory Bergquist'"]
   spec.email         = ["'cory.j.bergquist@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This program will scrape websites, and return coding meet ups for the Phoenix area.}
+  spec.description   = %q{This program will scrape websites, and return coding meet ups for the Phoenix area. It will also be able to return, the time of the meet up, where it is, and some additional info.}
+  spec.homepage      = "https://github.com/coryjbergquist/coding-meetups"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
 
   spec.add_dependency "nokogiri"
 
