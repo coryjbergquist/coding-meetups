@@ -3,6 +3,8 @@ class CodingMeetups::Meetups
 
     attr_accessor :name, :time, :info
 
+    @@meetup_list = []
+
   def self.all
     #returns a bunch of instances of coding meetups
     #scrape coding website, then return meetups
@@ -20,6 +22,23 @@ class CodingMeetups::Meetups
 
     @meetups
   end
+
+  def self.websites
+    @@websites_array = ["https://www.meetup.com/webdesignersdevelopers/", "https://www.meetup.com/Thinkful-Phoenix/"]
+  end
+
+  def self.scrape_websites
+    @@websites_array.each do |x|
+      doc = Nokogiri::HTML(open(x))
+      meetup_1 = self.new
+      meetup_1.name = doc.css(".groupHomeHeader-groupNameLink").text
+      meetup_1.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
+      meetup_1.info = doc.css(".group-home .group-description").text
+      @@meetup_list << meetup_1
+
+    binding.pry
+  end
+
 
   def self.scrape_group_1
 
