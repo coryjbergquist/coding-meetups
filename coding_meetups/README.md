@@ -23,7 +23,8 @@ Or install it yourself as:
 
 ## Usage
 
-type ./bin/coding-meetups to begin CLI program.
+While in the directory: "./coding-meetups/coding_meetups"
+type "./bin/coding-meetups" to begin CLI program.
 Then follow instructions given in the CLI.
 
 ## Development

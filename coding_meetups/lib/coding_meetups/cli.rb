@@ -1,5 +1,4 @@
 #CLI Controller
-require "pry"
 class CodingMeetups::CLI
 
   def call

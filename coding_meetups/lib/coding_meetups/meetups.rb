@@ -1,4 +1,3 @@
-require "pry"
 class CodingMeetups::Meetups
 
     attr_accessor :name, :time, :info
