@@ -22,9 +22,10 @@ class CodingMeetups::Meetups
 
     @meetups
   end
-
+  # testing making more DRY, getting rid of each single group method, and putting it into one method.
   def self.websites
-    @@websites_array = ["https://www.meetup.com/webdesignersdevelopers/", "https://www.meetup.com/Thinkful-Phoenix/"]
+    @@websites_array = ["https://www.meetup.com/webdesignersdevelopers/", "https://www.meetup.com/Thinkful-Phoenix/",
+      "https://www.meetup.com/Phoenix-Python-Meetup-Group/", "https://www.meetup.com/azPHPUG/", "https://www.meetup.com/Phoenix-JavaScript/"]
   end
 
   def self.scrape_websites
@@ -35,6 +36,7 @@ class CodingMeetups::Meetups
       meetup_1.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
       meetup_1.info = doc.css(".group-home .group-description").text
       @@meetup_list << meetup_1
+    end
 
     binding.pry
   end
