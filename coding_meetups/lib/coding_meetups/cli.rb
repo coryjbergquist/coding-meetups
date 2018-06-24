@@ -10,6 +10,7 @@ class CodingMeetups::CLI
 
   def list_meetups
     puts "these are the meetups"
+    @meetups = []
     @meetups = CodingMeetups::Meetups.all
     @meetups.each.with_index(1) do |meetup, index|
       puts "#{index}. #{meetup.name} - #{meetup.time}."
@@ -18,13 +19,12 @@ class CodingMeetups::CLI
   end
 
   def menu
-
     input = nil
     while input != "exit"
     puts "Enter the number of the meetup that you would like to explore, then type 'info' to view a description of the current meetup, type 'list' to list the meetups, or type 'exit'."
     input = gets.strip.downcase
 
-    if input.to_i.between?(1, 5)
+    if input.to_i.between?(1, @meetups.count)
       the_meetup = @meetups[input.to_i-1]
       puts "#{the_meetup.name} - #{the_meetup.time}."
     elsif input == "list"
