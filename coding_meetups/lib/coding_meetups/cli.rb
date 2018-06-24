@@ -12,7 +12,7 @@ class CodingMeetups::CLI
     @meetups = []
     @meetups = CodingMeetups::Meetups.all
     @meetups.each.with_index(1) do |meetup, index|
-      puts "#{index}. #{meetup.name} - #{meetup.time}."
+      puts "#{index}. #{meetup.name}."
     end
 
   end
