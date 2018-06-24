@@ -7,7 +7,6 @@ class CodingMeetups::Meetups
     #returns a bunch of instances of coding meetups
     #scrape coding website, or facebook, then return meetups
     self.scrape_meetups
-
   end
 
   def self.scrape_meetups
@@ -37,9 +36,23 @@ class CodingMeetups::Meetups
   end
 
   def self.scrape_meetup_com
-    doc = Nokogiri::HTML(open("https://www.meetup.com/webdesignersdevelopers/events/"))
+    doc = Nokogiri::HTML(open("https://www.meetup.com/webdesignersdevelopers/events/mlhpxnyxkbvb/"))
     binding.pry
+    meetup_1 = self.new
+    meetup_1.name = doc.css("h1").text
+    meetup_1.location = doc.css(".flex .venueDisplay-venue-address").text
+    meetup_1.time = doc.css(".flex time").text
+
+    #doc.css(".flex time eventTimeDisplay-recurrence")
+
   end
+
+  def self.scrape_meetup_com_test
+      browser = Watir::Browser.new :chrome, headless: true
+      browser.goto("https://www.meetup.com/webdesignersdevelopers/events/")
+      doc = Nokogiri::HTML(browser.html)
+      binding.pry
+    end
 #  searching for this link within the current page "https://www.meetup.com/webdesignersdevelopers/events/mlhpxnyxkbvb/"
 #  doc.css("div#outlet #root .flex .flex-item #mupMain .bounds .child-wrapper .chunk .eventList")
 
