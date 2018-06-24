@@ -10,8 +10,8 @@ class CodingMeetups::Meetups
     #returns a bunch of instances of coding meetups
     #scrape coding website, then return meetups
     @@meetup_list = []
-    self.websites
-    self.scrape_websites
+    websites
+    scrape_websites
     @@meetup_list
   end
 
@@ -28,7 +28,7 @@ class CodingMeetups::Meetups
   end
 
   def self.scrape_websites
-    self.websites.each do |x|
+    websites.each do |x|
       doc = Nokogiri::HTML(open(x))
       meetup_1 = self.new
       meetup_1.name = doc.css(".groupHomeHeader-groupNameLink").text
