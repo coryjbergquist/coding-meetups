@@ -10,7 +10,6 @@ class CodingMeetups::CLI
 
   def list_meetups
     puts "these are the meetups"
-
     @meetups = CodingMeetups::Meetups.all
     @meetups.each.with_index(1) do |meetup, index|
       puts "#{index}. #{meetup.name} - #{meetup.time}."
@@ -32,6 +31,13 @@ class CodingMeetups::CLI
       list_meetups
     elsif input == "info"
       puts "#{the_meetup.info}"
+    elsif input == "add"
+      puts "enter the full Meetup group URL (including the group name) that you would like to add"
+      new_input = gets.strip.downcase
+      if new_input.include?("https://www.meetup.com/")
+        CodingMeetups::Meetups.websites("new_input")
+        puts "You have added a new group! Please type 'list' to see your new list of groups."
+      end
     else
       puts  "Option unavailable, please enter an option listed in the menu."
     end

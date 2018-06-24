@@ -1,4 +1,7 @@
-Scrape for coding meet ups in area
+- Scrape for coding meet ups in area
+- Utilize Meetup.com to search for groups in Phoenix
+- List groups, next meetup time, and additional info
+- List should always show the next meetup time.
 
 #this will stub out the structure of a new gem
 bundle gem coding_meetups
@@ -10,8 +13,7 @@ bundle gem coding_meetups
 chmod +x coding_meetups
 
 #What is in a meetup?
-- Name
-- Location
+- Group Name
 - Meeting Time
-- Meeting frequency 
 - More info
+- The next available meetup
