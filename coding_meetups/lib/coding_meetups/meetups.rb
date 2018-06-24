@@ -5,7 +5,7 @@ class CodingMeetups::Meetups
 
   def self.all
     #returns a bunch of instances of coding meetups
-    #scrape coding website, or facebook, then return meetups
+    #scrape coding website, then return meetups
     self.scrape_meetups
   end
 
@@ -14,58 +14,72 @@ class CodingMeetups::Meetups
 
     @meetups << self.scrape_group_1
     @meetups << self.scrape_group_2
-    #go to facebook, find coding groups for Phoenix
-    #extract group info
-    #instantiate a meetup
+    @meetups << self.scrape_group_3
+    @meetups << self.scrape_group_4
+    @meetups << self.scrape_group_5
 
     @meetups
-
-    # meetup_1 = self.new
-    # meetup_1.name = "Phoenix meetup 1"
-    # meetup_1.location = "here's the location for meeetup 1"
-    # meetup_1.time = "here's the date, time, and frequency of meetup 1"
-    # meetup_1.info = "here's extra info on the meetup 1"
-    #
-    # meetup_2 = self.new
-    # meetup_2.name = "Phoenix meetup 2"
-    # meetup_2.location = "here's the location for meetup 2"
-    # meetup_2.time = "here's the date, time, and frequency of meetup 2"
-    # meetup_2.info = "here's extra info on the meetup 2"
-    #
-    # [meetup_1, meetup_2]
-
   end
 
   def self.scrape_group_1
+
     doc = Nokogiri::HTML(open("https://www.meetup.com/webdesignersdevelopers/"))
     meetup_1 = self.new
     meetup_1.name = doc.css(".groupHomeHeader-groupNameLink").text
     meetup_1.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
     meetup_1.info = doc.css(".group-home .group-description").text
     meetup_1
+
   end
 
   def self.scrape_group_2
+
     doc = Nokogiri::HTML(open("https://www.meetup.com/Thinkful-Phoenix/"))
     meetup_2 = self.new
     meetup_2.name = doc.css(".groupHomeHeader-groupNameLink").text
     meetup_2.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
     meetup_2.info = doc.css(".group-home .group-description").text
     meetup_2
+
   end
 
   def self.scrape_group_3
-    
+
+    doc = Nokogiri::HTML(open("https://www.meetup.com/Phoenix-Python-Meetup-Group/"))
+    meetup_3 = self.new
+    meetup_3.name = doc.css(".groupHomeHeader-groupNameLink").text
+    meetup_3.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
+    meetup_3.info = doc.css(".group-home .group-description").text
+    meetup_3
+
+  end
+
+  def self.scrape_group_4
+
+    doc = Nokogiri::HTML(open("https://www.meetup.com/azPHPUG/"))
+    meetup_4 = self.new
+    meetup_4.name = doc.css(".groupHomeHeader-groupNameLink").text
+    meetup_4.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
+    meetup_4.info = doc.css(".group-home .group-description").text
+    meetup_4
+
+  end
+
+  def self.scrape_group_5
+
+    doc = Nokogiri::HTML(open("https://www.meetup.com/Phoenix-JavaScript/"))
+    meetup_5 = self.new
+    meetup_5.name = doc.css(".groupHomeHeader-groupNameLink").text
+    meetup_5.time = "Next meeting is #{doc.css(".eventCard--clickable .eventTimeDisplay").first.text}"
+    meetup_5.info = doc.css(".group-home .group-description").text
+    meetup_5
 
   end
 
 
-  # def self.scrape_meetup_com_test
-  #     browser = Watir::Browser.new :chrome, headless: true
-  #     browser.goto("https://www.meetup.com/webdesignersdevelopers/events/")
-  #     doc = Nokogiri::HTML(browser.html)
-  #     binding.pry
-  #   end
+
+
+
 #  searching for this link within the current page "https://www.meetup.com/webdesignersdevelopers/events/mlhpxnyxkbvb/"
 #  doc.css("div#outlet #root .flex .flex-item #mupMain .bounds .child-wrapper .chunk .eventList")
 

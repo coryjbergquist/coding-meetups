@@ -3,18 +3,11 @@ PATH
   specs:
     coding_meetups (0.1.0)
       nokogiri
-      selenium
-      watir
 
 GEM
   remote: https://rubygems.org/
   specs:
-    childprocess (0.9.0)
-      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.2)
-    ffi (1.9.25)
-    jar_wrapper (0.1.8)
-      zip
     method_source (0.9.0)
     mini_portile2 (2.3.0)
     nokogiri (1.8.3)
@@ -23,15 +16,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rake (10.4.2)
-    rubyzip (1.2.1)
-    selenium (0.2.11)
-      jar_wrapper
-    selenium-webdriver (3.12.0)
-      childprocess (~> 0.5)
-      rubyzip (~> 1.2)
-    watir (6.11.0)
-      selenium-webdriver (~> 3.4, >= 3.4.1)
-    zip (2.0.2)
 
 PLATFORMS
   ruby
