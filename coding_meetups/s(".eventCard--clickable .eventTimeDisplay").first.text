@@ -1,0 +1,43 @@
+=> [1;34m#(Element:0x10557d4 {[0m
+  name = [31m[1;31m"[0m[31mdiv[1;31m"[0m[31m[0m,
+  attributes = [
+    [1;34m#(Attr:0x1055748 {[0m
+      name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+      value = [31m[1;31m"[0m[31meventTimeDisplay text--secondary text--small wrap--singleLine--truncate[1;31m"[0m[31m[0m
+      })],
+  children = [
+    [1;34m#(Element:0x1054eec {[0m
+      name = [31m[1;31m"[0m[31mtime[1;31m"[0m[31m[0m,
+      attributes = [
+        [1;34m#(Attr:0x1054e88 {[0m name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m }),
+        [1;34m#(Attr:0x1054e38 {[0m name = [31m[1;31m"[0m[31mdatetime[1;31m"[0m[31m[0m, value = [31m[1;31m"[0m[31m1531791000000[1;31m"[0m[31m[0m })],
+      children = [
+        [1;34m#(Element:0x10542f8 {[0m
+          name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+          attributes = [
+            [1;34m#(Attr:0x1054208 {[0m
+              name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+              value = [31m[1;31m"[0m[31meventTimeDisplay-startDate[1;31m"[0m[31m[0m
+              })],
+          children = [
+            [1;34m#(Element:0x1057a0c {[0m
+              name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+              children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31mMonday, July 16, 2018[1;31m"[0m[31m[0m)]
+              }),
+            [1;34m#(Text [0m[31m[1;31m"[0m[31m, [1;31m"[0m[31m[0m),
+            [1;34m#(Element:0x10574f8 {[0m
+              name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+              attributes = [
+                [1;34m#(Attr:0x1057458 {[0m
+                  name = [31m[1;31m"[0m[31mclass[1;31m"[0m[31m[0m,
+                  value = [31m[1;31m"[0m[31meventTimeDisplay-startDate-time[1;31m"[0m[31m[0m
+                  })],
+              children = [
+                [1;34m#(Element:0x1056f08 {[0m
+                  name = [31m[1;31m"[0m[31mspan[1;31m"[0m[31m[0m,
+                  children = [ [1;34m#(Text [0m[31m[1;31m"[0m[31m6:30 PM[1;31m"[0m[31m[0m)]
+                  })]
+              })]
+          })]
+      })]
+  })

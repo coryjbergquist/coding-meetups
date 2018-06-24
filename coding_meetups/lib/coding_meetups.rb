@@ -1,3 +1,4 @@
+require "selenium"
 require "watir"
 require "nokogiri"
 require "open-uri"
