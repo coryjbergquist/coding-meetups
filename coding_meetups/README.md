@@ -1,8 +1,9 @@
 # CodingMeetups
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/coding_meetups`. To experiment with that code, run `bin/console` for an interactive prompt.
+Lists coding meetup groups in the Phoenix area, using https://www.meetup.com/
+Lists group name, next available meetup, and extra info about group
+Can 'add' another group to the list by adding the group's URL
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +23,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+type ./bin/coding-meetups to begin CLI program.
+Then follow instructions given in the CLI.
 
 ## Development
 
