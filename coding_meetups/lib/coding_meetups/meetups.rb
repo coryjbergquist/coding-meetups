@@ -17,13 +17,13 @@ class CodingMeetups::Meetups
   def self.websites(new_website = nil)
 
     if new_website != nil
-      if @@websites_array.include?("new_website")
+    if @@websites_array.include?("new_website")
 
-      else
+    else
       @@websites_array << "#{new_website}"
     end
     end
-@@websites_array
+  @@websites_array
   end
 
   def self.scrape_websites

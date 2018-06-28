@@ -37,6 +37,8 @@ class CodingMeetups::CLI
       CodingMeetups::Meetups.websites("#{new_input}")
         puts "You have added a new group! Please type 'list' to see your new list of groups."
       end
+    elsif input == "exit"
+      break
     else
       puts  "Option unavailable, please enter an option listed in the menu."
     end

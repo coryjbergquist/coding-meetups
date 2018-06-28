@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-  require "./lib/coding_meetups"
+require_relative "../lib/coding_meetups"
 
 
-CodingMeetups::CLI.new.call
+session = CodingMeetups::CLI.new
+session.call
